@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue TO-DO</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+</head>
+<body>
+  
+  <div id="app" class="flex justify-evenly py-8">
+    <div class="w-1/2">
+      <h2 class="text-center mb-4 text-2xl ">To-do App</h2>
+      <div class="flex h-12">
+        <input type="text" v-model="newTodo" placeholder="Add to-do" class="border border-blue-200 box-border rounded-md h-full text-md p-4 text-gray-800 outline-none focus:border-blue-400 w-full" @keydown.enter="addTodo()">
+        <span class="text-white rounded-md ml-4 h-full bg-blue-300 flex justify-center items-center px-3 cursor-pointer hover:bg-blue-400" @click="addTodo()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+        </span>
+      </div>
+  
+      <ul v-if="todoList.length > 0" class="overflow-hidden rounded-md my-4 space-y-reverse space-y-1 flex flex-col-reverse">
+        <li v-for="todo in todoList" :key="todo.id" class="py-3 px-4 flex items-center" :class="{'bg-red-100': !todo.completed, 'bg-green-100': todo.completed}">
+          <div class="flex-1 flex items-center">
+            <input type="checkbox" class="cursor-pointer" v-model="todo.completed">
+            <input @keydown.enter="editMode(todo)" @dblclick="editMode(todo)" class="w-full border-b cursor-pointer bg-transparent border-transparent ml-2 mr-4 px-2 py-1 outline-none" type="text" v-model="todo.text" :class="{'border-white cursor-text': todo.edit}" :readonly="!todo.edit">
+          </div>
+          <span @click="deleteTodo(todo)" class="text-red-500 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </span>
+        </li>
+      </ul>
+      <div v-if="todoList.length == 0" class="mt-4 bg-yellow-100 border-t border-b border-yellow-500 text-yellow-700 px-4 py-3" role="alert">
+        <p class="font-bold">Empty List</p>
+        <p class="text-sm">There is no to-do found in the application. Please add some above.</p>
+      </div>
+      
+      <span v-else-if="completedCount > 0">
+        {{completedCount}} out of {{todoList.length}}
+        {{todoList.length == 1 ? 'to-do' : 'to-dos'}}
+        {{completedCount > 1 ? 'have': 'has'}} been completed.
+      </span>
+      <span v-else>No to-do completed yet.</span>
+      <p class="text-sm">* double-click on items to edit text.</p>
+    </div>
+    
+    <pre class="w-1/3 border p-4 rounded-xl text-xs overflow-x-auto">{{todoList}}</pre>
+  </div>
+
+  <script src="https://unpkg.com/vue@3.2.20/dist/vue.global.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

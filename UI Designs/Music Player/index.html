@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="./main.min.css">
+</head>
+<body>
+  
+  <aside class="left-menu">
+    <div class="profile">
+        <div class="image">
+            <img src="https://i.imgur.com/Kui3ozw.png" alt="">
+        </div>
+        <span class="fullname">Todd Tuttle</span>
+        <span class="username">@toddshark87</span>
+    </div>
+
+    <nav class="menu">
+        <h5>Browse Media</h5>
+        <ul>
+            <li class="current">
+                <a href="#">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="flame-outline"></ion-icon>
+                    <span>Top Charts</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="compass-outline"></ion-icon>
+                    <span>Feed</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="radio-outline"></ion-icon>
+                    <span>Radio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="videocam-outline"></ion-icon>
+                    <span>Video</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="menu">
+        <h5>Library</h5>
+        <ul>
+            <li>
+                <a href="#" data-count="112">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <span>Favourites</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-count="28">
+                    <ion-icon name="musical-notes-outline"></ion-icon>
+                    <span>Playlists</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="albums-outline"></ion-icon>
+                    <span>Albums</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="people-outline"></ion-icon>
+                    <span>Artists</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+  </aside>
+
+  <section class="container">
+    <header>
+        <div class="search">
+            <input type="text" placeholder="Search by song, artist, album, video, podcast ..."/>
+            <ion-icon name="search"></ion-icon>
+        </div>
+        <div class="btn-settings">
+            <ion-icon name="settings-outline"></ion-icon>
+        </div>
+    </header>
+    <main>
+        
+        <div class="track-list slider">
+            <header>
+                <h2><span>New</span> Releases</h2>
+                <div class="arrows">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+            </header>
+            <ul>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: #f0a23c">
+                        <img src="https://i.imgur.com/SjSCfOE.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Blinding Lights</a>
+                    <div class="artist">The Weeknd</div>
+                </li>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: rgba(0, 143, 214, 0.6)">
+                        <img src="https://i.imgur.com/3yZ6Rap.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Say It Again</a>
+                    <div class="artist">AJ Mitchell</div>
+                </li>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: rgba(175, 149, 177, 0.75)">
+                        <img src="https://i.imgur.com/kOjHQdE.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Manic</a>
+                    <div class="artist">Halsey</div>
+                </li>
+                <li>
+                    <a href="#"class="track-poster" style="--shadow: rgba(85, 165, 231, 0.7)">
+                        <img src="https://i.imgur.com/Qp2rCQu.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Wanted</a>
+                    <div class="artist">OneRepublic</div>
+                </li>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: #f0a23c">
+                        <img src="https://i.imgur.com/SjSCfOE.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Blinding Lights</a>
+                    <div class="artist">The Weeknd</div>
+                </li>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: #f0a23c">
+                        <img src="https://i.imgur.com/SjSCfOE.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Blinding Lights</a>
+                    <div class="artist">The Weeknd</div>
+                </li>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: rgba(0, 143, 214, 0.6)">
+                        <img src="https://i.imgur.com/3yZ6Rap.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Say It Again</a>
+                    <div class="artist">AJ Mitchell</div>
+                </li>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: rgba(175, 149, 177, 0.75)">
+                        <img src="https://i.imgur.com/kOjHQdE.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Manic</a>
+                    <div class="artist">Halsey</div>
+                </li>
+                <li>
+                    <a href="#"class="track-poster" style="--shadow: rgba(85, 165, 231, 0.7)">
+                        <img src="https://i.imgur.com/Qp2rCQu.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Wanted</a>
+                    <div class="artist">OneRepublic</div>
+                </li>
+                <li>
+                    <a href="#" class="track-poster" style="--shadow: #f0a23c">
+                        <img src="https://i.imgur.com/SjSCfOE.png" width="256" height="256" alt="">
+                    </a>
+                    <a href="#" class="track-name">Blinding Lights</a>
+                    <div class="artist">The Weeknd</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="track-list table">
+            <header>
+                <h2><span>Popular</span> Tracks</h2>
+                <a href="#" class="more">See All</a>
+            </header>
+            <ul>
+                <li>
+                    <div class="info-left">
+                        <span class="count">01</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/2b/Dua_Lipa_-_Don%27t_Start_Now.png" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Don't Start Now</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Dua Lipa</a>
+                        <div class="detail">
+                            <span class="duration">3:03</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">02</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Trevor_Daniel_-_Falling.png" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Falling</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Traver Daniel</a>
+                        <div class="detail">
+                            <span class="duration">3:39</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">03</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/8/83/This_City_by_Sam_Fischer.png" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">This City</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Sam Fischer</a>
+                        <div class="detail">
+                            <span class="duration">3:14</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">04</span>
+                        <img src="https://www.sonymusic.co.jp/adm_image/common/artist_image/71007000/71007949/jacket_image/198414__800_800_0.jpg" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Up All Night</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Khalid</a>
+                        <div class="detail">
+                            <span class="duration">2:39</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">05</span>
+                        <img src="https://m.media-amazon.com/images/I/81XZ+V0u4sL._SS500_.jpg" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Breathe</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Fleurie</a>
+                        <div class="detail">
+                            <span class="duration">3:41</span>
+                            <ion-icon name="pause-circle-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">06</span>
+                        <img src="https://i1.sndcdn.com/artworks-000328671528-01bmdv-t500x500.jpg" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Olsun</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Sertab Erener</a>
+                        <div class="detail">
+                            <span class="duration">6:15</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li><li>
+                    <div class="info-left">
+                        <span class="count">07</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/7/78/The_Weeknd_-_Heartless.png" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Heartless</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">The Weeknd</a>
+                        <div class="detail">
+                            <span class="duration">3:20</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">08</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/Jonas_Brothers_-_Happiness_Begins.png" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Only Human</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Jonas Brothers</a>
+                        <div class="detail">
+                            <span class="duration">3:03</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">09</span>
+                        <img src="https://lastfm.freetls.fastly.net/i/u/770x0/ae122923a3f47e5b8f650cedece5a184.jpg" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Trampoline</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">SHAED</a>
+                        <div class="detail">
+                            <span class="duration">3:04</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">10</span>
+                        <img src="https://direct.rhapsody.com/imageserver/images/alb.438343421/600x600.jpg" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Tears of Gold</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Faouzia</a>
+                        <div class="detail">
+                            <span class="duration">3:52</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">11</span>
+                        <img src="https://www.muud.com.tr/TTNETMuzik/img/cacheimg/250/album_434086_250_250.jpg?cacheID=1607465692" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">Wait a Minute</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">Willow Smith</a>
+                        <div class="detail">
+                            <span class="duration">3:17</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="info-left">
+                        <span class="count">12</span>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02ca52e740dbb23c2b6cce3b8c" width="36" height="36" alt="" class="poster">
+                        <a href="#" class="track-name">B.S.G.</a>
+                    </div>
+                    <div class="info-right">
+                        <a href="#" class="artist">BEGE</a>
+                        <div class="detail">
+                            <span class="duration">3:03</span>
+                            <ion-icon name="play-sharp"></ion-icon>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+  </section>
+
+  <div class="currently-playing">
+    <div class="track-info">
+        <div class="poster">
+            <img src="https://m.media-amazon.com/images/I/81XZ+V0u4sL._SS500_.jpg" width="50" height="50" alt="">
+        </div>
+        <div class="info-inner">
+            <a href="#" class="track-name">Breathe</a>
+            <a href="#" class="artist">Fleurie</a>
+        </div>
+    </div>
+
+    <div class="track-control">
+        <div class="control-buttons">
+            <ion-icon name="play-skip-back-outline"></ion-icon>
+            <ion-icon class="pause" name="play-outline"></ion-icon>
+            <ion-icon name="play-skip-forward-outline"></ion-icon>
+        </div>
+        <div class="progress" style="--past: 79%">
+            <div class="past"></div>
+            <span></span>
+        </div>
+        <div class="duration">
+            <span>2:59</span> / 3:41
+        </div>
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+        <ion-icon name="heart-outline"></ion-icon>
+    </div>
+  </div>
+</body>
+</html>

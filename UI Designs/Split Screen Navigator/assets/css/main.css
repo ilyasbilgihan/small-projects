@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Alice|Fenix|Marcellus|Prociono');
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1:200,400,500,600');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fenix', serif;
+}
+
+#navbar {
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    padding: 0 3%;
+    line-height: 65px;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 6px #4d4d4d;
+    color: #fff;
+}
+
+#navbar .left-side {
+    float: left;
+}
+
+#navbar .right-side {
+    float: right;
+}
+
+#navbar .right-side a {
+    color: white;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+#navbar .right-side a i {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 12px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    box-shadow: 1px 1px 6px #ccc;
+}
+
+#show {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+	background: #333;
+}
+
+#show .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s;
+    background-attachment: fixed;
+}
+
+#show .item:before {
+    opacity: 0;
+    transition: .5s all;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.05) 100%);
+    position: absolute;
+}
+
+#show .item.hovered:before {
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(231,153,37,.7) 10%, rgba(231,153,37,0.1) 100%); 
+}
+
+#show .item.noHovered:before {
+    opacity: 1;
+}
+
+.item:nth-child(1){
+    background-image: url('../img/img1.png');
+    background-position: left;
+}
+
+.item:nth-child(2){
+    left: calc(100% / 3);
+    background: url('../img/img2.png');
+    background-position: center;
+}
+
+.item:nth-child(3){
+    left: calc(200% / 3);
+    background: url('../img/img3.png');
+    background-position: right;
+}
+
+.item.noClicked {
+    width: 0%!important;
+    transition: 1s all!important;
+}
+
+.item.clicked {
+    left: 0!important;
+    background-position: left;
+    transition: 1s all!important;
+}
+
+#show .item .inc {
+    position: relative;
+    width: calc(100% / 3);
+    height: 100%;
+    transition: .5s;
+}
+
+#show .item .info {
+    position: absolute;
+    width: 300px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+    text-align: center;
+    text-shadow: 1px 1px 6px #4d4d4d;
+    transition: .5s all;
+}
+
+#show .item .info .date:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -20px;
+    background: #e79925;
+    box-shadow: 1px 1px 3px #4d4d4d;
+}
+
+.item.noClicked .info {
+    opacity: 0;
+}
+
+.info h1 {
+    margin: 8px 0 40px 0;
+}
+
+.info .desc {
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.item.hovered .inc {
+    width: 44%!important;
+    transition: .5s;
+}
+
+.item.noHovered .inc {
+    width: 28%!important;
+    transition: .5s;
+}
+
+.item.hovered .inc .info { bottom: 25%!important; transition: .5s;}
+
+
+.get-more {
+    font-family: 'Gothic A1', sans-serif; 
+    font-weight: 200; 
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 180px;
+    opacity: 0;
+    transition: .5s;
+}
+  
+.get-more:before {
+    content: attr(text);
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: rotate(-90deg);
+}
+
+.get-more:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(-90deg);
+    margin: -60px 0 0 -20px;
+}
+
+.item.hovered .info .get-more { opacity: 1; margin-top: 90px; }
+
+
+.item.noClicked .inc {
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 300px;
+}
+
+.item.clicked .inc {
+    animation: changeInc 1s forwards;
+    animation-timing-function: ease-in-out
+}
+
+
+@keyframes changeInc {
+    0% {}
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+    100% {
+        opcity: 1;
+        visibility: visible;
+        padding-top: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
