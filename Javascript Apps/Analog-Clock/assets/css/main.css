@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#clock {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 22px solid #4c4c4c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.align > * {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform-origin: bottom;
+  transition: .1s;
+  transition-timing-function: cubic-bezier(0.05, 2, 0.5, 1);
+}
+
+.centerDot {
+  width: 5px;
+  height: 5px;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.hHand {
+  width: 8px;
+  border-radius: 20px;
+  height: 108px;
+  background: #4c4c4c;
+  transform: translate(-50%,-100%) rotate(0deg);
+}
+
+.mHand {
+  width: 5px;
+  border-radius: 20px;
+  height: 174px;
+  background: #b4b4b4;
+  transform: translate(-50%,-100%) rotate(0deg);
+}
+
+.sHand {
+  width: 2px;
+  border-radius: 20px;
+  height: 215px;
+  background: red;
+  transform: translate(-50%,-100%) rotate(0deg);
+}

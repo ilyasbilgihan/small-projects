@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create A Triangle</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</head>
+<body>
+
+	<div id="info">
+		<span class="warning">A triangle cannot be drawn on this edges.</span>
+		<span class="error">Please enter Edge Length of Triangle</span>
+		<span class="success">The Triangle was created successfully. </span>
+	</div>
+	<div id="triangle">
+		<div class="edge one" data-length="0"><span>A</span></div>
+		<div class="edge two" data-length="0"><span>B</span></div>
+		<div class="edge three" data-length="0"><span>C</span></div>
+	</div>
+
+	<div id="enterEdgesLength">
+		<label for="val1">The length of Red edge: </label><input name="val1" type="number" value="6"><br><br>
+		<label for="val1">The length of Green edge: </label><input name="val2" type="number" value="8"><br><br>
+		<label for="val1">The length of Blue edge: </label><input name="val3" type="number" value="10"><br><br>
+		<button class="setLengths">Create the Triangle</button><br><br><br>
+		<p></p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+
+button {
+    padding: 10px 5px;
+    background: seagreen;
+    color: lightgoldenrodyellow;
+}
+
+#info {
+	width: 100%;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+#info .error { color: red; }
+#info .warning { color: orange; }
+#info .success { color: seagreen; }
+
+#info span {
+	text-align: center;
+	position: absolute;
+	opacity: 0;
+	transition-delay: 1s;
+	transition: 1s all;
+}
+
+#info span.show {
+	opacity: 1;
+}
+
+#triangle {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translate(-50%,50%);
+}
+
+#triangle .edge:before {
+	content: '( ~'attr(data-length)'cm )';
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: .5px;
+	width: max-content;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-100%);
+}
+
+
+#triangle .edge {
+	height: 2px;
+	display: block;
+	position: absolute;
+	transition: 1s all;
+	opacity: 0;
+	text-align: right;
+}
+
+#triangle .edge span {
+    position: absolute;
+    transform: translate(-100%,50%);
+    font-size: 25px;
+}
+
+#triangle .edge.show {
+	opacity: 1;
+}
+
+.edge.one { background-color: red; left: 0; transform-origin: left; }
+.edge.one:before { color: red; }
+.edge.two { background-color: green; text-align: left!important; }
+.edge.two:before { color: green; transform: translate(-50%,0)!important; }
+.edge.three { background-color: blue; right: 0; transform-origin: right; }
+.edge.three:before { color: blue; }
+
+#enterEdgesLength {
+    width: 420px;
+    position: absolute;
+    right: 25%;
+    top: 50%;
+    transform: translate(50%,-50%);
+}
+
+#enterEdgesLength input, #enterEdgesLength button {
+	float: right;
+	border: 1px solid #ccc;
+	width: 170px;
+}
+
+#enterEdgesLength p {
+	opacity: 0;
+	transition: 1s all;
+}
+
+#enterEdgesLength p.show {
+	opacity: 1;
+	transition: 1s all;
+}
