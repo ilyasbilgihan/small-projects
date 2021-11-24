@@ -1,0 +1,11 @@
+{
+  "name": "spotify-redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tailwindcss -i ./assets/styles/tailwind.css -c ./tailwind.config.js -o ./assets/styles/tailwind.min.css -m -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

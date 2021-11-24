@@ -1,0 +1,49 @@
+/* Personal usage allowed only */
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("LuxoraGrotesk-Bold.eot");
+  src: url("LuxoraGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
+    url("LuxoraGrotesk-Bold.woff2") format("woff2"),
+    url("LuxoraGrotesk-Bold.woff") format("woff"),
+    url("LuxoraGrotesk-Bold.svg#LuxoraGrotesk-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("LuxoraGrotesk-Medium.eot");
+  src: url("LuxoraGrotesk-Medium.eot?#iefix") format("embedded-opentype"),
+    url("LuxoraGrotesk-Medium.woff2") format("woff2"),
+    url("LuxoraGrotesk-Medium.woff") format("woff"),
+    url("LuxoraGrotesk-Medium.svg#LuxoraGrotesk-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("LuxoraGrotesk-Light.eot");
+  src: url("LuxoraGrotesk-Light.eot?#iefix") format("embedded-opentype"),
+    url("LuxoraGrotesk-Light.woff2") format("woff2"),
+    url("LuxoraGrotesk-Light.woff") format("woff"),
+    url("LuxoraGrotesk-Light.svg#LuxoraGrotesk-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Luxora Grotesk";
+  src: url("LuxoraGrotesk-Regular.eot");
+  src: url("LuxoraGrotesk-Regular.eot?#iefix") format("embedded-opentype"),
+    url("LuxoraGrotesk-Regular.woff2") format("woff2"),
+    url("LuxoraGrotesk-Regular.woff") format("woff"),
+    url("LuxoraGrotesk-Regular.svg#LuxoraGrotesk-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

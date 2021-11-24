@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Luxora Grotesk", sans-serif;
+    @apply antialiased;
+  }
+  body {
+    background: url(../images/bg.png) no-repeat center center fixed;
+    @apply text-alt3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  main .content,
+  .sidebar-menu {
+    overflow: overlay;
+  }
+
+  .sidebar-menu {
+    height: calc(100vh - 16.5rem);
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[24px] h-[24px] rounded-[100px] bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    @apply rounded-[100px];
+    background-clip: padding-box;
+    border: 8px solid transparent;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(255, 255, 255, 0.5);
+    background-clip: padding-box;
+  }
+
+  ::-moz-selection {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 2px white;
+  }
+
+  ::selection {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.75);
+  }
+}
+
+@layer components {
+  .sidebar-left {
+    transition: 300ms width, 300ms transform;
+  }
+  .sidebar-left.closed {
+    @apply w-[5rem];
+  }
+  .sidebar-left.closed .sidebar-menu {
+    @apply overflow-hidden;
+  }
+  .sidebar-left.closed .closed-hide {
+    @apply opacity-0 invisible;
+  }
+  .sidebar-left.closed .toggle-btn {
+    @apply rotate-180;
+  }
+  .sidebar-menu li {
+    @apply overflow-hidden;
+  }
+
+  .btn {
+    @apply px-4 py-2 bg-blue-600 text-white rounded transition duration-300;
+  }
+  .text-hover {
+    @apply duration-300 hover:text-white;
+  }
+  .header-bg {
+    @apply absolute z-20 bottom-0 w-full h-full bg-[#2c2c2c] bg-opacity-10 backdrop-blur-md;
+  }
+  .header-bg + span {
+    @apply left-[var(--offset-left)] z-10 absolute bg-white w-[1.25rem] h-[0.5rem] rounded-md bottom-0 translate-y-1/2;
+  }
+  .breadcrumb a:not(:first-child):before {
+    content: "/";
+    @apply px-[0.5rem] text-alt2;
+  }
+  .icon {
+    @apply flex items-center justify-center w-[1.25rem] h-[1.25rem];
+  }
+  .profile {
+    @apply w-[2.75rem] h-[2.75rem] rounded-full duration-300 p-[2px] border-2 border-[#444444] hover:border-primary;
+  }
+
+  .song-list tr {
+    @apply h-[4.25rem];
+  }
+  .song-list td > div {
+    @apply flex items-center;
+  }
+  .song-list tr td:not(:first-child) {
+    @apply border-b border-border box-border p-0 pt-px;
+  }
+  .song-list tr:hover {
+    @apply bg-gradient-to-r from-transparent to-[rgba(255,255,255,0.15)] text-white text-opacity-80;
+  }
+
+  .song-list tr.currently-playing td:first-child > span {
+    @apply invisible opacity-0;
+  }
+  .song-list tr:not(.currently-playing) td:first-child > .music-actions {
+    @apply opacity-0 invisible;
+  }
+  .song-list tr:not(.currently-playing):hover td:first-child > .music-actions {
+    @apply opacity-100 visible;
+  }
+  .song-list tr:not(.currently-playing):hover td:first-child > span {
+    @apply opacity-0 invisible;
+  }
+  .song-list tr:not(.currently-playing) .music-actions div:not(.play) {
+    @apply opacity-0 invisible;
+  }
+  .currently-playing td:first-child,
+  .currently-playing td:nth-child(3) {
+    @apply text-primary;
+  }
+
+  .music-actions:not(.paused):hover .icon.pause {
+    @apply visible opacity-100;
+  }
+  .music-actions:not(.paused):hover .icon.playing,
+  .music-actions.paused .icon.playing {
+    @apply invisible opacity-0;
+  }
+  .music-actions.paused .icon.play {
+    @apply visible opacity-100;
+  }
+  .music-actions .icon.play:hover {
+    @apply opacity-70;
+  }
+}
