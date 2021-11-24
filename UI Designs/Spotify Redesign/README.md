@@ -1,6 +1,6 @@
-```
+```bash
 # run tailwind compiler before launching "src/index.html"
-npm start
+$ npm start
 ```
 
 
