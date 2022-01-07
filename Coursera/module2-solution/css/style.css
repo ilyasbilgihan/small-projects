@@ -32,10 +32,10 @@ section {
 
 section h3 {
   position: absolute;
-  top: -2px; /* must be over of the border*/
-  right: -2px; /* must be over of the border*/
+  top: -1px; /* must be over of the border*/
+  right: -1px; /* must be over of the border*/
   padding: 5px 20px;
-  border: 2px solid #000;
+  border: 1px solid #000;
   font-size: 1.25em;
 }
 
