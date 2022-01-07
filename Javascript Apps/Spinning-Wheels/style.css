@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+body {
+  background-color: #eee;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  margin: 40px 0;
+}
+
+.wheels {
+  display: flex;
+  user-select: none;
+}
+
+.canvas {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-left: 15px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.pointer {
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  background-color: #eee;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 45%;
+  border-bottom-right-radius: 45%;
+  top: 50%;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.pointer:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 25px solid #eee;
+  top: 2px;
+  left: 30px;
+}
+.pointer.l {
+  left: 50%;
+}
+.pointer.r {
+  left: 50%;
+}
+
+.items {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.history {
+  height: 200px;
+  overflow: auto;
+  margin: 20px 0;
+  background-color: #f8f8f8;
+  padding: 20px 10px;
+}
+
+input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+button {
+  cursor: pointer;
+  background-color: lightblue;
+  border: none;
+}
+button:hover {
+  opacity: 0.8;
+}
+input,
+button {
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 4px;
+  color: #444;
+  outline: none;
+}

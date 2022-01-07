@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheel</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="wheels">
+      <div class="canvas" title="Double click the slice you want to remove from the wheel-1.">
+        <div class="pointer l"></div>
+        <canvas id="wheel1" style="transition: transform 5s cubic-bezier(0.3, 1, 0.7, 1)"></canvas>
+      </div>
+      <div class="canvas" title="Double click the slice you want to remove from wheel-2.">
+        <div class="pointer r"></div>
+        <canvas id="wheel2" style="transition: transform 5s cubic-bezier(0.3, 1, 0.7, 1)"></canvas>
+      </div>
+    </div>
+    <div>
+      <div class="items">
+        <div>
+          <h2>History of Wheel 1</h2>
+          <ul class="history wheel1">
+          </ul>
+          <div>
+            <input type="text" name="wheel1" placeholder="Enter a new item">
+            <button onclick="addItemToWheel('wheel1')">Add</button>
+          </div>
+        </div>
+        <div>
+          <h2>History of Wheel 2</h2>
+          <ul class="history wheel2">
+          </ul>
+          <div>
+            <input type="text" name="wheel2" placeholder="Enter a new item">
+            <button onclick="addItemToWheel('wheel2')">Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="items">
+        <button style="width: 50%" onclick="spinWheels()">Spin the wheels</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
