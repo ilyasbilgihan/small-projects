@@ -13,7 +13,7 @@ get(REQUEST_URL)
     
 
     // Grouping by contract code
-    let grouppedIntraDayTradeHistoryList = {}
+    let groupedIntraDayTradeHistoryList = {}
     intraDayTradeHistoryList.reduce((prev, curr) =>{
 
       if(curr.conract.slice(0,2) === 'PH'){
@@ -23,12 +23,12 @@ get(REQUEST_URL)
 
       return prev;
 
-    }, grouppedIntraDayTradeHistoryList);
+    }, groupedIntraDayTradeHistoryList);
 
 
     // Calculating essential values of each contract
     let result = []
-    for (const [key, contracts] of Object.entries(grouppedIntraDayTradeHistoryList)) {
+    for (const [key, contracts] of Object.entries(groupedIntraDayTradeHistoryList)) {
 
       let dateArray = key.slice(2).match(/.{1,2}/g) // "PH22011805" => ["22", "01", "18", "05"]
       let date = `${dateArray[2]}.${dateArray[1]}.20${dateArray[0]} ${dateArray[3]}:00` // "18.01.2022 05:00"
