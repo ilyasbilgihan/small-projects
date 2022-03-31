@@ -8,7 +8,7 @@ $ npm install
 # run script without args
 $ npm start
 
-# run script with args (YYYY-MM-DD)
-$ npm start <startDate> <endDate>
+# run script with args - startDate for the first arg, endDate for the second arg.
+$ npm start "2022-01-26" "2022-01-27"
 
 ```
