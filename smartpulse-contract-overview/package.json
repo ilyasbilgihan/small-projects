@@ -1,0 +1,14 @@
+{
+  "name": "smartpulse-contract-overview",
+  "version": "1.0.0",
+  "description": "smartPulse Technical Interview Task - Contract Overview",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "ilyasbilgihan@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
